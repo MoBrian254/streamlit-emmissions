@@ -10,7 +10,7 @@ st.set_page_config(page_title='MoBrian254 Global Emmission Data Visualization',
 
 @st.cache_data
 def get_data():
-    df = pd.read_csv('data/emmisondata.csv')
+    df = pd.read_csv('emmisondata.csv')
     return df
 
 
@@ -51,25 +51,25 @@ st.markdown('### Metrics')
 t1, t2, t3, t4, t5, t6, t7 = st.columns(7, gap='large')
 
 with t1:
-    st.image('images/totals.png', use_column_width='Auto')
+    st.image('totals.png', use_column_width='Auto')
     st.metric(label='Totals', value=numerize(totals, 2))
 with t2:
-    st.image('images/coal.png', use_column_width='Auto')
+    st.image('coal.png', use_column_width='Auto')
     st.metric(label='Total Coal', value=numerize(total_coal, 2))
 with t3:
-    st.image('images/oil.png', use_column_width='Auto')
+    st.image('oil.png', use_column_width='Auto')
     st.metric(label='Total Oil', value=numerize(total_oil, 2))
 with t4:
-    st.image('images/gas.png', use_column_width='Auto')
+    st.image('gas.png', use_column_width='Auto')
     st.metric(label='Total Gas', value=numerize(total_gas, 2))
 with t5:
-    st.image('images/cement.png', use_column_width='Auto')
+    st.image('cement.png', use_column_width='Auto')
     st.metric(label='Total Cement', value=numerize(total_cement, 2))
 with t6:
-    st.image('images/flaring.png', use_column_width='Auto')
+    st.image('flaring.png', use_column_width='Auto')
     st.metric(label='Totals Flaring', value=numerize(total_flaring, 2))
 with t7:
-    st.image('images/others.jpg', use_column_width='Auto')
+    st.image('others.jpg', use_column_width='Auto')
     st.metric(label='Total Other', value=numerize(total_other, 2))
 
 # Row B
